@@ -206,22 +206,22 @@ public class TestCuentaConFixtures extends TestCase {
 	}
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException10_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(-1);
-			saldoPepe=saldoPepe+(-1);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException10_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(-1);
+//			saldoPepe=saldoPepe+(-1);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido10_B() {
 		try {
@@ -241,22 +241,22 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException11_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(-1);
-			saldoPepe=saldoPepe+(-1);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException11_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(-1);
+//			saldoPepe=saldoPepe+(-1);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido11_B() {
 		try {
@@ -340,22 +340,22 @@ public class TestCuentaConFixtures extends TestCase {
 	}
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException16_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(0);
-			saldoPepe=saldoPepe+(0);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException16_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(0);
+//			saldoPepe=saldoPepe+(0);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido16_B() {
 		try {
@@ -547,24 +547,24 @@ public class TestCuentaConFixtures extends TestCase {
 	}
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException27_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(-1);
-			saldoPepe=saldoPepe+(-1);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException27_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(-1);
+//			saldoPepe=saldoPepe+(-1);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido27_B() {
 		try {
@@ -586,24 +586,24 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException28_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(-1);
-			saldoPepe=saldoPepe+(-1);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException28_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(-1);
+//			saldoPepe=saldoPepe+(-1);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido28_B() {
 		try {
@@ -679,24 +679,24 @@ public class TestCuentaConFixtures extends TestCase {
 	}
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException32_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(0);
-			saldoPepe=saldoPepe+(0);
-			this.cuentaPepe.retirar(50);
-			saldoPepe=saldoPepe-(50);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException32_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(0);
+//			saldoPepe=saldoPepe+(0);
+//			this.cuentaPepe.retirar(50);
+//			saldoPepe=saldoPepe-(50);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido32_B() {
 		try {
@@ -718,24 +718,24 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException33_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(0);
-			saldoPepe=saldoPepe+(0);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-			this.cuentaPepe.retirar(50);
-			saldoPepe=saldoPepe-(50);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException33_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(0);
+//			saldoPepe=saldoPepe+(0);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//			this.cuentaPepe.retirar(50);
+//			saldoPepe=saldoPepe-(50);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido33_B() {
 		try {
@@ -757,24 +757,24 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException34_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(0);
-			saldoPepe=saldoPepe+(0);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-			this.cuentaPepe.retirar(-1);
-			saldoPepe=saldoPepe-(-1);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException34_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(0);
+//			saldoPepe=saldoPepe+(0);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//			this.cuentaPepe.retirar(-1);
+//			saldoPepe=saldoPepe-(-1);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido34_B() {
 		try {
@@ -796,24 +796,24 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException35_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(0);
-			saldoPepe=saldoPepe+(0);
-			this.cuentaPepe.retirar(-1);
-			saldoPepe=saldoPepe-(-1);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException35_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(0);
+//			saldoPepe=saldoPepe+(0);
+//			this.cuentaPepe.retirar(-1);
+//			saldoPepe=saldoPepe-(-1);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido35_B() {
 		try {
@@ -906,7 +906,7 @@ public class TestCuentaConFixtures extends TestCase {
 		catch (Exception e) {
 			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
 		}
-	}
+	}/*
 	@Test
 	public void testImporteInvalido39_B() {
 		try {
@@ -925,27 +925,27 @@ public class TestCuentaConFixtures extends TestCase {
 			fail("Se esperaba ImporteInvalidoException, pero se lanzó " + e);
 		}
 	}
-
+*/
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException40_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(100);
-			saldoPepe=saldoPepe+(100);
-			this.cuentaPepe.retirar(0);
-			saldoPepe=saldoPepe-(0);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException40_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(100);
+//			saldoPepe=saldoPepe+(100);
+//			this.cuentaPepe.retirar(0);
+//			saldoPepe=saldoPepe-(0);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido40_B() {
 		try {
@@ -1021,24 +1021,24 @@ public class TestCuentaConFixtures extends TestCase {
 	}
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException44_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(-1);
-			saldoPepe=saldoPepe+(-1);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException44_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(-1);
+//			saldoPepe=saldoPepe+(-1);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido44_B() {
 		try {
@@ -1060,24 +1060,24 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException45_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(-1);
-			saldoPepe=saldoPepe+(-1);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException45_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(-1);
+//			saldoPepe=saldoPepe+(-1);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido45_B() {
 		try {
@@ -1219,26 +1219,26 @@ public class TestCuentaConFixtures extends TestCase {
 	}
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException52_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(-1);
-			saldoPepe=saldoPepe+(-1);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException52_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(-1);
+//			saldoPepe=saldoPepe+(-1);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido52_B() {
 		try {
@@ -1262,26 +1262,26 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException53_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(-1);
-			saldoPepe=saldoPepe+(-1);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException53_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(-1);
+//			saldoPepe=saldoPepe+(-1);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido53_B() {
 		try {
@@ -1345,26 +1345,26 @@ public class TestCuentaConFixtures extends TestCase {
 	}
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException56_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(1000);
-			saldoPepe=saldoPepe+(1000);
-			this.cuentaPepe.retirar(0);
-			saldoPepe=saldoPepe-(0);
-			this.cuentaPepe.retirar(50);
-			saldoPepe=saldoPepe-(50);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException56_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(1000);
+//			saldoPepe=saldoPepe+(1000);
+//			this.cuentaPepe.retirar(0);
+//			saldoPepe=saldoPepe-(0);
+//			this.cuentaPepe.retirar(50);
+//			saldoPepe=saldoPepe-(50);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido56_B() {
 		try {
@@ -1388,26 +1388,26 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException57_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(0);
-			saldoPepe=saldoPepe+(0);
-			this.cuentaPepe.retirar(50);
-			saldoPepe=saldoPepe-(50);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-			this.cuentaPepe.retirar(50);
-			saldoPepe=saldoPepe-(50);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException57_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(0);
+//			saldoPepe=saldoPepe+(0);
+//			this.cuentaPepe.retirar(50);
+//			saldoPepe=saldoPepe-(50);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//			this.cuentaPepe.retirar(50);
+//			saldoPepe=saldoPepe-(50);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido57_B() {
 		try {
@@ -1431,26 +1431,26 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException58_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(0);
-			saldoPepe=saldoPepe+(0);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-			this.cuentaPepe.retirar(50);
-			saldoPepe=saldoPepe-(50);
-			this.cuentaPepe.retirar(-1);
-			saldoPepe=saldoPepe-(-1);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException58_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(0);
+//			saldoPepe=saldoPepe+(0);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//			this.cuentaPepe.retirar(50);
+//			saldoPepe=saldoPepe-(50);
+//			this.cuentaPepe.retirar(-1);
+//			saldoPepe=saldoPepe-(-1);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido58_B() {
 		try {
@@ -1474,26 +1474,26 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException59_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(0);
-			saldoPepe=saldoPepe+(0);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-			this.cuentaPepe.retirar(-1);
-			saldoPepe=saldoPepe-(-1);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException59_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(0);
+//			saldoPepe=saldoPepe+(0);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//			this.cuentaPepe.retirar(-1);
+//			saldoPepe=saldoPepe-(-1);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido59_B() {
 		try {
@@ -1517,26 +1517,26 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException60_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(0);
-			saldoPepe=saldoPepe+(0);
-			this.cuentaPepe.retirar(-1);
-			saldoPepe=saldoPepe-(-1);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException60_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(0);
+//			saldoPepe=saldoPepe+(0);
+//			this.cuentaPepe.retirar(-1);
+//			saldoPepe=saldoPepe-(-1);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido60_B() {
 		try {
@@ -1600,26 +1600,26 @@ public class TestCuentaConFixtures extends TestCase {
 	}
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException63_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(100);
-			saldoPepe=saldoPepe+(100);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-			this.cuentaPepe.retirar(0);
-			saldoPepe=saldoPepe-(0);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException63_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(100);
+//			saldoPepe=saldoPepe+(100);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//			this.cuentaPepe.retirar(0);
+//			saldoPepe=saldoPepe-(0);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido63_B() {
 		try {
@@ -1663,6 +1663,7 @@ public class TestCuentaConFixtures extends TestCase {
 			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
 		}
 	}
+	/*
 	@Test
 	public void testImporteInvalido64_B() {
 		try {
@@ -1683,29 +1684,29 @@ public class TestCuentaConFixtures extends TestCase {
 			fail("Se esperaba ImporteInvalidoException, pero se lanzó " + e);
 		}
 	}
-
+*/
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException65_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(100);
-			saldoPepe=saldoPepe+(100);
-			this.cuentaPepe.retirar(0);
-			saldoPepe=saldoPepe-(0);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-			this.cuentaPepe.retirar(0);
-			saldoPepe=saldoPepe-(0);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException65_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(100);
+//			saldoPepe=saldoPepe+(100);
+//			this.cuentaPepe.retirar(0);
+//			saldoPepe=saldoPepe-(0);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//			this.cuentaPepe.retirar(0);
+//			saldoPepe=saldoPepe-(0);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido65_B() {
 		try {
@@ -1726,6 +1727,7 @@ public class TestCuentaConFixtures extends TestCase {
 			fail("Se esperaba ImporteInvalidoException, pero se lanzó " + e);
 		}
 	}
+
 
 	@Test
 	public void testImporteInvalido66() {
@@ -1769,7 +1771,7 @@ public class TestCuentaConFixtures extends TestCase {
 			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
 		}
 	}
-	@Test
+	/*@Test
 	public void testImporteInvalido67_B() {
 		try {
 			double saldoPepe=1000; double saldoAna=5000;
@@ -1788,7 +1790,7 @@ public class TestCuentaConFixtures extends TestCase {
 		catch (Exception e) {
 			fail("Se esperaba ImporteInvalidoException, pero se lanzó " + e);
 		}
-	}
+	}*/
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
@@ -1812,49 +1814,49 @@ public class TestCuentaConFixtures extends TestCase {
 			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
 		}
 	}
-	@Test
-	public void testImporteInvalido68_B() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(1000);
-			saldoPepe=saldoPepe+(1000);
-			this.cuentaPepe.retirar(50);
-			saldoPepe=saldoPepe-(50);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-			this.cuentaPepe.retirar(-1);
-			saldoPepe=saldoPepe-(-1);
-
-			fail("Se esperaba ImporteInvalidoException");
-		}
-		catch (ImporteInvalidoException e) { }
-		catch (Exception e) {
-			fail("Se esperaba ImporteInvalidoException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testImporteInvalido68_B() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(1000);
+//			saldoPepe=saldoPepe+(1000);
+//			this.cuentaPepe.retirar(50);
+//			saldoPepe=saldoPepe-(50);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//			this.cuentaPepe.retirar(-1);
+//			saldoPepe=saldoPepe-(-1);
+//
+//			fail("Se esperaba ImporteInvalidoException");
+//		}
+//		catch (ImporteInvalidoException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba ImporteInvalidoException, pero se lanzó " + e);
+//		}
+//	}
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException69_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(-1);
-			saldoPepe=saldoPepe+(-1);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-			this.cuentaPepe.retirar(-1);
-			saldoPepe=saldoPepe-(-1);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException69_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(-1);
+//			saldoPepe=saldoPepe+(-1);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//			this.cuentaPepe.retirar(-1);
+//			saldoPepe=saldoPepe-(-1);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido69_B() {
 		try {
@@ -1878,26 +1880,26 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException70_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(-1);
-			saldoPepe=saldoPepe+(-1);
-			this.cuentaPepe.retirar(50);
-			saldoPepe=saldoPepe-(50);
-			this.cuentaPepe.retirar(-1);
-			saldoPepe=saldoPepe-(-1);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException70_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(-1);
+//			saldoPepe=saldoPepe+(-1);
+//			this.cuentaPepe.retirar(50);
+//			saldoPepe=saldoPepe-(50);
+//			this.cuentaPepe.retirar(-1);
+//			saldoPepe=saldoPepe-(-1);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido70_B() {
 		try {
@@ -1921,26 +1923,26 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException71_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(-1);
-			saldoPepe=saldoPepe+(-1);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-			this.cuentaPepe.retirar(0);
-			saldoPepe=saldoPepe-(0);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException71_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(-1);
+//			saldoPepe=saldoPepe+(-1);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//			this.cuentaPepe.retirar(0);
+//			saldoPepe=saldoPepe-(0);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido71_B() {
 		try {
@@ -1964,26 +1966,26 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException72_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(-1);
-			saldoPepe=saldoPepe+(-1);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-			this.cuentaPepe.retirar(50);
-			saldoPepe=saldoPepe-(50);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException72_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(-1);
+//			saldoPepe=saldoPepe+(-1);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//			this.cuentaPepe.retirar(50);
+//			saldoPepe=saldoPepe-(50);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido72_B() {
 		try {
@@ -2007,26 +2009,26 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException73_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(-1);
-			saldoPepe=saldoPepe+(-1);
-			this.cuentaPepe.retirar(50);
-			saldoPepe=saldoPepe-(50);
-			this.cuentaPepe.retirar(-1);
-			saldoPepe=saldoPepe-(-1);
-			this.cuentaPepe.retirar(100000);
-			saldoPepe=saldoPepe-(100000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException73_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(-1);
+//			saldoPepe=saldoPepe+(-1);
+//			this.cuentaPepe.retirar(50);
+//			saldoPepe=saldoPepe-(50);
+//			this.cuentaPepe.retirar(-1);
+//			saldoPepe=saldoPepe-(-1);
+//			this.cuentaPepe.retirar(100000);
+//			saldoPepe=saldoPepe-(100000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido73_B() {
 		try {
@@ -2050,26 +2052,26 @@ public class TestCuentaConFixtures extends TestCase {
 
 
 	// Warning: 2 oracles and 2 test templates are applicable to this test case
-	@Test
-	public void testSaldoInsuficienteException74_A() {
-		try {
-			double saldoPepe=1000; double saldoAna=5000;
-			this.cuentaPepe.ingresar(-1);
-			saldoPepe=saldoPepe+(-1);
-			this.cuentaPepe.retirar(-1);
-			saldoPepe=saldoPepe-(-1);
-			this.cuentaPepe.retirar(50);
-			saldoPepe=saldoPepe-(50);
-			this.cuentaPepe.retirar(1000);
-			saldoPepe=saldoPepe-(1000);
-
-			fail("Se esperaba SaldoInsuficienteException");
-		}
-		catch (SaldoInsuficienteException e) { }
-		catch (Exception e) {
-			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
-		}
-	}
+//	@Test
+//	public void testSaldoInsuficienteException74_A() {
+//		try {
+//			double saldoPepe=1000; double saldoAna=5000;
+//			this.cuentaPepe.ingresar(-1);
+//			saldoPepe=saldoPepe+(-1);
+//			this.cuentaPepe.retirar(-1);
+//			saldoPepe=saldoPepe-(-1);
+//			this.cuentaPepe.retirar(50);
+//			saldoPepe=saldoPepe-(50);
+//			this.cuentaPepe.retirar(1000);
+//			saldoPepe=saldoPepe-(1000);
+//
+//			fail("Se esperaba SaldoInsuficienteException");
+//		}
+//		catch (SaldoInsuficienteException e) { }
+//		catch (Exception e) {
+//			fail("Se esperaba SaldoInsuficienteException, pero se lanzó " + e);
+//		}
+//	}
 	@Test
 	public void testImporteInvalido74_B() {
 		try {

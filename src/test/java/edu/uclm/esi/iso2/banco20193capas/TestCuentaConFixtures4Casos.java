@@ -10,6 +10,7 @@ import edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException;
 import edu.uclm.esi.iso2.banco20193capas.exceptions.PinInvalidoException;
 import edu.uclm.esi.iso2.banco20193capas.exceptions.SaldoInsuficienteException;
 import edu.uclm.esi.iso2.banco20193capas.exceptions.TarjetaBloqueadaException;
+import edu.uclm.esi.iso2.banco20193capas.exceptions.TokenInvalidoException;
 import edu.uclm.esi.iso2.banco20193capas.model.Cliente;
 import edu.uclm.esi.iso2.banco20193capas.model.Cuenta;
 import edu.uclm.esi.iso2.banco20193capas.model.Manager;
@@ -157,4 +158,124 @@ public class TestCuentaConFixtures4Casos extends TestCase {
 		
 	}
 	
+	@Test 
+	public void testSacarDineroTC_1(){
+		try {
+			this.tcPepe.sacarDinero(1234, 10000);
+			fail("Esperaba SaldoInsuficienteException");
+		} catch (SaldoInsuficienteException e) {
+			
+		} catch (ImporteInvalidoException e) {
+			fail("Se ha producido  SaldoInsuficienteException");
+	}catch (TarjetaBloqueadaException e ) {
+		fail("Se ha producido SaldoInsuficienteException");
+	}catch( PinInvalidoException e) {
+		fail("Esperaba SaldoInsuficienteException");
+	}
+	}
+		
+		@Test
+		public void testSacarDineroTC_2(){
+			try {
+				this.tcPepe.sacarDinero(1234, -1000);
+				fail("Esperaba mporteInvalidoException");
+			} catch (ImporteInvalidoException e) {
+				
+			} catch (SaldoInsuficienteException e) {
+				fail("Se ha producido ImporteInvalidoException");
+		}catch (TarjetaBloqueadaException e ) {
+			fail("Se ha producido ImporteInvalidoException");
+		}catch( PinInvalidoException e) {
+			fail("Se ha producido ImporteInvalidoException");
+		}
+		
+	
+		}
+		@Test
+		public void testSacarDineroTC_3(){
+			try {
+				this.tcPepe.sacarDinero(0, 100);
+				fail("Esperaba mporteInvalidoException");
+			} catch ( PinInvalidoException e) {
+				
+			} catch (SaldoInsuficienteException e) {
+				fail("Se ha producido ImporteInvalidoException");
+		}catch (TarjetaBloqueadaException e ) {
+			fail("Se ha producido ImporteInvalidoException");
+		}catch( ImporteInvalidoException e) {
+			fail("Se ha producido ImporteInvalidoException");
+		}
+		
+		}
+		@Test
+		public void testSacarDineroTC_4(){
+			try {
+				this.tcPepe.sacarDinero(3000, 100);
+				fail("Esperaba mporteInvalidoException");
+			} catch ( PinInvalidoException e) {
+				
+			} catch (SaldoInsuficienteException e) {
+				fail("Se ha producido ImporteInvalidoException");
+		}catch (TarjetaBloqueadaException e ) {
+			fail("Se ha producido ImporteInvalidoException");
+		}catch( ImporteInvalidoException e) {
+			fail("Se ha producido ImporteInvalidoException");
+		}
+		
+		}
+		
+		@Test
+		public void ConfirmarCompraPorInternet (){
+			try {
+			int token = this.tcPepe.comprarPorInternet(tcPepe.getPin(), 300);
+			this.tcPepe.confirmarCompraPorInternet(-2);
+			fail("Se  esperaba TokenInvalido");
+			}catch(TokenInvalidoException e ) {
+				
+			}catch(Exception e) {
+				fail("Se  esperaba TokenInvalido");
+			}
+			
+		
+		   }
+		public void ConfirmarCompraPorInternet_2(){
+			try {
+			int token = this.tcPepe.comprarPorInternet(tcPepe.getPin(), 300);
+			this.tcPepe.confirmarCompraPorInternet(2);
+			fail("Se esperaba TokenInvalido");
+			}catch(TokenInvalidoException e ) {
+				
+			}catch(Exception e) {
+				fail("Se esperaba TokenInvalido");
+			}
+			
+		
+		   }
+		public void ConfirmarCompraPorInternet_3(){
+			try {
+			int token = this.tcPepe.comprarPorInternet(tcPepe.getPin(), 300);
+			int t = token;
+			this.tcPepe.confirmarCompraPorInternet(t);
+			assertTrue(token == t);
+			}catch(Exception e) {
+				fail("Excepcion inseperada " + e.getMessage());
+			} 
+			
+		
+		   }
+		public void ConfirmarCompraPorInternet_4(){
+			try {
+			int token = this.tcPepe.comprarPorInternet(tcPepe.getPin(), 300);
+			this.tcPepe.confirmarCompraPorInternet(1000);
+			fail("Se  esperaba TokenInvalido");
+			}catch(TokenInvalidoException e ) {
+				
+			}catch(Exception e) {
+				fail("Se  esperaba TokenInvalido");
+			}
+			
+		
+		   }
+		
+ 
 }
