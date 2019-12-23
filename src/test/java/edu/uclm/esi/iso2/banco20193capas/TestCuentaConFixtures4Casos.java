@@ -35,13 +35,11 @@ public class TestCuentaConFixtures4Casos extends TestCase {
 		Manager.getTarjetaDebitoDAO().deleteAll();
 		Manager.getCuentaDAO().deleteAll();
 		Manager.getClienteDAO().deleteAll();
-
-		this.pepe = new Cliente("12345X", "Pepe", "Pérez");
-		this.pepe.insert();
-		this.ana = new Cliente("98765F", "Ana", "López");
-		this.ana.insert();
-		this.cuentaPepe = new Cuenta(1);
-		this.cuentaAna = new Cuenta(2);
+		
+		this.pepe = new Cliente("12345X", "Pepe", "Pérez"); this.pepe.insert();
+		this.ana = new Cliente("98765F", "Ana", "López"); this.ana.insert();
+		this.cuentaPepe = new Cuenta(1); this.cuentaAna = new Cuenta(2);
+		
 		try {
 			this.cuentaPepe.addTitular(pepe);
 			this.cuentaPepe.insert();
@@ -75,7 +73,7 @@ public class TestCuentaConFixtures4Casos extends TestCase {
 		}
 	}
 
-	@Test
+  @Test
 	public void testTransferencia() {
 		try {
 			this.cuentaPepe.transferir(this.cuentaAna.getId(), 500, "Alquiler");
@@ -85,8 +83,8 @@ public class TestCuentaConFixtures4Casos extends TestCase {
 			fail("Excepción inesperada: " + e.getMessage());
 		}
 	}
-
-	@Test
+	
+	@Test 
 	public void testCompraConTC() {
 		try {
 			cuentaPepe.retirar(200);
@@ -102,34 +100,87 @@ public class TestCuentaConFixtures4Casos extends TestCase {
 			fail("Excepción inesperada: " + e.getMessage());
 		}
 	}
-
+	//////////////////////////////////////////////////
 	@Test
 	public void testCompraPorInternetConTC() {
 		try {
-			this.cuentaPepe.retirar(200);
-			assertTrue(this.cuentaPepe.getSaldo() == 800);
-
-			int token = this.tcPepe.comprarPorInternet(tcPepe.getPin(), 300);
-			assertTrue(this.tcPepe.getCreditoDisponible() == 2000);
+			
+			int token = this.tcPepe.comprarPorInternet(tcPepe.getPin(), 1000);
+			assertTrue(this.tcPepe.getCreditoDisponible()==2000);
 			this.tcPepe.confirmarCompraPorInternet(token);
-			assertTrue(this.tcPepe.getCreditoDisponible() == 1700);
+			assertTrue(this.tcPepe.getCreditoDisponible()==1000);
 			this.tcPepe.liquidar();
-			assertTrue(this.tcPepe.getCreditoDisponible() == 2000);
-			assertTrue(cuentaPepe.getSaldo() == 500);
+			assertTrue(this.tcPepe.getCreditoDisponible()==2000);
 		} catch (Exception e) {
 			fail("Excepción inesperada: " + e.getMessage());
 		}
 	}
 
 	@Test
-	public void testCompraPorInternetConTCPinInvalido() {
+	public void testComprarPorInternetConTCSaldoInsuficiente() {
 		try {
-			this.tcPepe.comprarPorInternet(5679, 100);
-		} catch (PinInvalidoException e) {
-		} catch (Exception e) {
-			fail("Esperaba PinInvalidoException");
+			assertTrue(this.cuentaPepe.getSaldo()==1000);
+			assertTrue(this.tcPepe.getCreditoDisponible()==2000);
+			int token = this.tcPepe.comprarPorInternet(tcPepe.getPin(), 2500);
+			fail("Se esperaba SaldoInsuficienteException");
+		}catch(SaldoInsuficienteException e) {
+		}catch(Exception e) {
+			fail("Esperaba SaldoInsuficienteException");
 		}
+	}
+	@Test
+	public void testComprarPorInternetConTCImporteInvalido() {
+		try {
+			assertTrue(this.cuentaPepe.getSaldo()==1000);
+			assertTrue(this.tcPepe.getCreditoDisponible()==2000);
+			int token = this.tcPepe.comprarPorInternet(tcPepe.getPin(), -1);
+			fail("Se esperaba ImporteInvalidoException");
+		}catch(ImporteInvalidoException e) {
+		}catch(Exception e) {
+			fail("Esperaba ImporteInvalidoException");
+		}
+	}
+	
+	@Test
+	public void testCompraPorInternetConTCPinInvalido() {
+			try {
+				this.tcPepe.comprarPorInternet(-57, 1000);
+			} catch (PinInvalidoException e) {
+			} catch (Exception e) {
+				fail("Esperaba PinInvalidoException");
+			} 
 
+	}
+	
+	@Test////
+	public void testRetiradaImporteInvalido() {
+		try {
+			this.cuentaPepe.retirar(-150);
+		} catch (ImporteInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba ImporteInvalidoException");
+		}
+	}
+	
+	@Test////
+	public void testRetiradaSaldoInsuficiente() {
+		try {
+			this.cuentaPepe.retirar(3000);
+			fail("Esperaba SaldoInsuficienteException");
+		} catch (SaldoInsuficienteException e) {
+			
+		} catch (Exception e) {
+			fail("Se esperaba ImporteInvalidoException");
+		}
+	}
+	@Test///
+	public void testRetirada() {
+		try {
+			this.cuentaPepe.retirar(500);
+			assertTrue(this.cuentaPepe.getSaldo() == 500);
+		} catch (Exception e) {
+			fail("Excepción inesperada: " + e.getMessage());
+		}
 	}
 
 	@Test
