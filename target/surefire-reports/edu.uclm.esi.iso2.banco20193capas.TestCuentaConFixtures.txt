@@ -1,0 +1,128 @@
+-------------------------------------------------------------------------------
+Test set: edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures
+-------------------------------------------------------------------------------
+Tests run: 106, Failures: 31, Errors: 0, Skipped: 0, Time elapsed: 6.717 s <<< FAILURE! - in edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures
+testImporteInvalido39_B(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.063 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba ImporteInvalidoException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.SaldoInsuficienteException: Saldo insuficiente para el importe solicitado
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testImporteInvalido39_B(TestCuentaConFixtures.java:925)
+
+testImporteInvalido64_B(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.047 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba ImporteInvalidoException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.SaldoInsuficienteException: Saldo insuficiente para el importe solicitado
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testImporteInvalido64_B(TestCuentaConFixtures.java:1683)
+
+testImporteInvalido67_B(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.062 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba ImporteInvalidoException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.SaldoInsuficienteException: Saldo insuficiente para el importe solicitado
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testImporteInvalido67_B(TestCuentaConFixtures.java:1789)
+
+testImporteInvalido68_B(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.078 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba ImporteInvalidoException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.SaldoInsuficienteException: Saldo insuficiente para el importe solicitado
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testImporteInvalido68_B(TestCuentaConFixtures.java:1832)
+
+testSaldoInsuficienteException10_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.047 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe -1.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException10_A(TestCuentaConFixtures.java:222)
+
+testSaldoInsuficienteException11_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.031 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe -1.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException11_A(TestCuentaConFixtures.java:257)
+
+testSaldoInsuficienteException16_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.031 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe 0.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException16_A(TestCuentaConFixtures.java:356)
+
+testSaldoInsuficienteException27_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.031 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe -1.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException27_A(TestCuentaConFixtures.java:565)
+
+testSaldoInsuficienteException28_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.047 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe -1.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException28_A(TestCuentaConFixtures.java:604)
+
+testSaldoInsuficienteException32_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.031 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe 0.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException32_A(TestCuentaConFixtures.java:697)
+
+testSaldoInsuficienteException33_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.047 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe 0.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException33_A(TestCuentaConFixtures.java:736)
+
+testSaldoInsuficienteException34_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.031 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe 0.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException34_A(TestCuentaConFixtures.java:775)
+
+testSaldoInsuficienteException35_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.078 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe 0.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException35_A(TestCuentaConFixtures.java:814)
+
+testSaldoInsuficienteException40_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.062 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe 0.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException40_A(TestCuentaConFixtures.java:946)
+
+testSaldoInsuficienteException44_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.047 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe -1.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException44_A(TestCuentaConFixtures.java:1039)
+
+testSaldoInsuficienteException45_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.047 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe -1.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException45_A(TestCuentaConFixtures.java:1078)
+
+testSaldoInsuficienteException52_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.031 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe -1.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException52_A(TestCuentaConFixtures.java:1239)
+
+testSaldoInsuficienteException53_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.047 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe -1.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException53_A(TestCuentaConFixtures.java:1282)
+
+testSaldoInsuficienteException56_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.047 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe 0.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException56_A(TestCuentaConFixtures.java:1365)
+
+testSaldoInsuficienteException57_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.047 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe 0.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException57_A(TestCuentaConFixtures.java:1408)
+
+testSaldoInsuficienteException58_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.047 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe 0.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException58_A(TestCuentaConFixtures.java:1451)
+
+testSaldoInsuficienteException59_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.047 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe 0.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException59_A(TestCuentaConFixtures.java:1494)
+
+testSaldoInsuficienteException60_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.046 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe 0.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException60_A(TestCuentaConFixtures.java:1537)
+
+testSaldoInsuficienteException63_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.063 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe 0.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException63_A(TestCuentaConFixtures.java:1620)
+
+testSaldoInsuficienteException65_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.047 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe 0.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException65_A(TestCuentaConFixtures.java:1706)
+
+testSaldoInsuficienteException69_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.047 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe -1.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException69_A(TestCuentaConFixtures.java:1855)
+
+testSaldoInsuficienteException70_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.032 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe -1.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException70_A(TestCuentaConFixtures.java:1898)
+
+testSaldoInsuficienteException71_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.031 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe -1.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException71_A(TestCuentaConFixtures.java:1941)
+
+testSaldoInsuficienteException72_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.047 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe -1.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException72_A(TestCuentaConFixtures.java:1984)
+
+testSaldoInsuficienteException73_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.031 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe -1.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException73_A(TestCuentaConFixtures.java:2027)
+
+testSaldoInsuficienteException74_A(edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures)  Time elapsed: 0.031 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba SaldoInsuficienteException, pero se lanzó edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException: El importe -1.0 no es válido para esta operación
+	at edu.uclm.esi.iso2.banco20193capas.TestCuentaConFixtures.testSaldoInsuficienteException74_A(TestCuentaConFixtures.java:2070)
+
