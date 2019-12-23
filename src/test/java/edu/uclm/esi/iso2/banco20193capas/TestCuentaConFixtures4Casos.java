@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import edu.uclm.esi.iso2.banco20193capas.exceptions.CuentaInvalidaException;
 import edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException;
 import edu.uclm.esi.iso2.banco20193capas.exceptions.PinInvalidoException;
 import edu.uclm.esi.iso2.banco20193capas.exceptions.SaldoInsuficienteException;
@@ -279,7 +280,214 @@ public class TestCuentaConFixtures4Casos extends TestCase {
 		} catch (Exception e) {
 			fail("Se  esperaba TokenInvalido");
 		}
+  }
+	
+	@Test
+  public void testSacarDineroTD_1() {
+		try {
+			this.tdAna.sacarDinero(-1500, 500);
+			fail("Esperaba PinInvalidoException");
+		} catch (PinInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}
+	}
 
+	@Test
+	public void testSacarDineroTD_2() {
+		try {
+			this.tdAna.sacarDinero(1111, 500);
+			fail("Esperaba PinInvalidoException");
+		} catch (PinInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}
+	}
+
+	@Test
+	public void testSacarDineroTD_3() {
+		try {
+			this.tdAna.sacarDinero(1234, -1000);
+			fail("Esperaba ImporteInvalidoException");
+		} catch (ImporteInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba ImporteInvalidoException");
+		}
+	}
+
+	@Test
+	public void testSacarDineroTD_4() {
+		try {
+			this.tdAna.sacarDinero(5632, 500);
+			fail("Esperaba PinInvalidoException");
+		} catch (PinInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}
+
+	}
+
+	@Test
+	public void testSacarDineroTD_5() {
+		try {
+			this.tdAna.sacarDinero(1234, 5500);
+			fail("Se esperaba SaldoInsuficienteException");
+		} catch (SaldoInsuficienteException e) {
+		} catch (Exception e) {
+			fail("Se esperaba SaldoInsuficienteException");
+		}
+
+	}
+	
+	@Test
+	public void testCambiarPinTD_1() {
+		try {
+			this.tdAna.cambiarPin(-1500,2654);
+			fail("Se esperaba PinInvalidoException");
+		} catch (PinInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba PinInvalidoException");
+    }
+  }
+
+  public void testTransferencia_1() {
+		try {
+			this.cuentaPepe.transferir(-2l, 250.00, "Lo que sea");
+			fail("Esperaba CuentaInvalidaException");
+		}catch(CuentaInvalidaException e) {
+		}catch(Exception e) {
+			fail("Esperaba CuentaInvalidaException");
+		}
+	}
+	
+	@Test
+	public void testTransferencia_2() {
+		try {
+			this.cuentaPepe.transferir(1l, 250.00, "Lo que sea");
+			fail("Esperaba CuentaInvalidaException");
+		}catch(CuentaInvalidaException e) {
+		}catch(Exception e) {
+			fail("Esperaba CuentaInvalidaException");
+		}
+	}
+	
+	
+	@Test
+	public void testTransferencia_3() {
+		try {
+			this.cuentaPepe.transferir(this.cuentaAna.getId(), -1.00, "Lo que sea"); //this.cuentaAna.getId() == 2l
+			fail("Esperaba ImporteInvalidoException");
+		}catch(ImporteInvalidoException e) {
+		}catch(Exception e) {
+			fail("Esperaba ImporteInvalidoException");
+		}
+	}
+	
+	@Test
+	public void testTransferencia_4() {
+		try {
+			this.cuentaPepe.transferir(this.cuentaAna.getId(), 250.00, "Lo que sea"); //this.cuentaAna.getId() == 2l
+            assertTrue(this.cuentaPepe.getSaldo()==(1000.00 - 250.00 - 250.00*0.01));
+            assertTrue(this.cuentaAna.getSaldo()==(5000.00 + 250.00));
+		}catch(Exception e) {
+			fail("Excepción inesperada: " + e.getMessage());
+		}
+	}
+	
+	@Test
+	public void testTransferencia_5() {
+		try {
+			this.cuentaPepe.transferir(this.cuentaAna.getId(), 1100.00, "Lo que sea"); //this.cuentaAna.getId() == 2l
+			fail("Se esperaba SaldoInsuficienteException");
+		}catch(SaldoInsuficienteException e){
+		}catch(Exception e) {
+			fail("Se esperaba SaldoInsuficienteException");
+		}
+	}
+	
+	@Test
+	public void testTransferencia_6() {
+		try {
+			this.cuentaPepe.transferir(this.cuentaAna.getId(), 0.00, "Lo que sea"); //this.cuentaAna.getId() == 2l
+			fail("Se esperaba ImporteInvalidoException");
+		}catch(ImporteInvalidoException e){
+		}catch(Exception e) {
+			fail("Se esperaba ImporteInvalidoException");
+		}
+	}
+	
+	@Test
+	public void testCambiarPinTD_2() {
+		try {
+			this.tdAna.cambiarPin(1111, 2654);
+			fail("Se esperaba PinInvalidoException");
+		} catch (PinInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}
+	}
+	@Test
+	public void testCambiarPinTD_3() {
+		try {
+			this.tdAna.cambiarPin(1234, -1548);
+			fail("Se esperaba PinInvalidoException");
+		} catch (PinInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}
+	}
+	
+	@Test
+	public void testCambiarPinTD_4() {
+		try {
+			this.tdAna.cambiarPin(5632, 2654);
+			fail("Se esperaba PinInvalidoException");
+		} catch (PinInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}	
+	}
+
+	public void testTransferencia_7() {
+		try {
+			this.cuentaPepe.transferir(3l, 250.00, "Lo que sea"); //this.cuentaAna.getId() == 2l
+			fail("Se esperaba CuentaInvalidaException");
+		}catch(CuentaInvalidaException e){
+		}catch(Exception e) {
+			fail("Se esperaba CuentaInvalidaException");
+		}
+	}
+	
+	@Test 
+	public void testIngresar_1() {
+		try {
+			this.cuentaPepe.ingresar(-100.00);
+			fail("Se esperaba ImporteInvalidoException");
+		}catch(ImporteInvalidoException e){
+		}catch(Exception e) {
+			fail("Se esperaba ImporteInvalidoException");
+		}
+	}
+	
+	@Test 
+	public void testIngresar_2() {
+		try {
+			this.cuentaPepe.ingresar(3000.00);
+			assertTrue(this.cuentaPepe.getSaldo() == 4000.00);
+		}catch(Exception e) {
+			fail("Excepción inesperada: " + e.getMessage());
+		}
+	}
+	
+	@Test 
+	public void testIngresar_3() {
+		try {
+			this.cuentaPepe.ingresar(0.00);
+			fail("Se esperaba ImporteInvalidoException");
+		}catch(ImporteInvalidoException e){
+		}catch(Exception e) {
+			fail("Se esperaba ImporteInvalidoException");
+		}
 	}
 
 }
