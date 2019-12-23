@@ -159,7 +159,74 @@ public class TestCuentaConFixtures4Casos extends TestCase {
 	}
 	
 	@Test
-	public void testTransferencia_1() {
+  public void testSacarDineroTD_1() {
+		try {
+			this.tdAna.sacarDinero(-1500, 500);
+			fail("Esperaba PinInvalidoException");
+		} catch (PinInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}
+	}
+
+	@Test
+	public void testSacarDineroTD_2() {
+		try {
+			this.tdAna.sacarDinero(1111, 500);
+			fail("Esperaba PinInvalidoException");
+		} catch (PinInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}
+	}
+
+	@Test
+	public void testSacarDineroTD_3() {
+		try {
+			this.tdAna.sacarDinero(1234, -1000);
+			fail("Esperaba ImporteInvalidoException");
+		} catch (ImporteInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba ImporteInvalidoException");
+		}
+	}
+
+	@Test
+	public void testSacarDineroTD_4() {
+		try {
+			this.tdAna.sacarDinero(5632, 500);
+			fail("Esperaba PinInvalidoException");
+		} catch (PinInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}
+
+	}
+
+	@Test
+	public void testSacarDineroTD_5() {
+		try {
+			this.tdAna.sacarDinero(1234, 5500);
+			fail("Se esperaba SaldoInsuficienteException");
+		} catch (SaldoInsuficienteException e) {
+		} catch (Exception e) {
+			fail("Se esperaba SaldoInsuficienteException");
+		}
+
+	}
+	
+	@Test
+	public void testCambiarPinTD_1() {
+		try {
+			this.tdAna.cambiarPin(-1500,2654);
+			fail("Se esperaba PinInvalidoException");
+		} catch (PinInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba PinInvalidoException");
+    }
+  }
+
+  public void testTransferencia_1() {
 		try {
 			this.cuentaPepe.transferir(-2l, 250.00, "Lo que sea");
 			fail("Esperaba CuentaInvalidaException");
@@ -226,6 +293,37 @@ public class TestCuentaConFixtures4Casos extends TestCase {
 	}
 	
 	@Test
+	public void testCambiarPinTD_2() {
+		try {
+			this.tdAna.cambiarPin(1111, 2654);
+			fail("Se esperaba PinInvalidoException");
+		} catch (PinInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}
+	}
+	@Test
+	public void testCambiarPinTD_3() {
+		try {
+			this.tdAna.cambiarPin(1234, -1548);
+			fail("Se esperaba PinInvalidoException");
+		} catch (PinInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}
+	}
+	
+	@Test
+	public void testCambiarPinTD_4() {
+		try {
+			this.tdAna.cambiarPin(5632, 2654);
+			fail("Se esperaba PinInvalidoException");
+		} catch (PinInvalidoException e) {
+		} catch (Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}	
+	}
+
 	public void testTransferencia_7() {
 		try {
 			this.cuentaPepe.transferir(3l, 250.00, "Lo que sea"); //this.cuentaAna.getId() == 2l
