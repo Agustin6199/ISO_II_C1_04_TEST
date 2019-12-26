@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: edu.uclm.esi.iso2.banco20193capas.TestCuenta
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.671 s - in edu.uclm.esi.iso2.banco20193capas.TestCuenta
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.025 s - in edu.uclm.esi.iso2.banco20193capas.TestCuenta

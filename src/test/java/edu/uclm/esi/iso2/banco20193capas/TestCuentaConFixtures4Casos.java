@@ -6,6 +6,8 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import edu.uclm.esi.iso2.banco20193capas.exceptions.ClienteNoAutorizadoException;
+import edu.uclm.esi.iso2.banco20193capas.exceptions.ClienteNoEncontradoException;
 import edu.uclm.esi.iso2.banco20193capas.exceptions.CuentaInvalidaException;
 import edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException;
 import edu.uclm.esi.iso2.banco20193capas.exceptions.PinInvalidoException;
@@ -477,6 +479,7 @@ public class TestCuentaConFixtures4Casos extends TestCase {
 			fail("Se esperaba PinInvalidoException");
 		}
 	}
+	/*
 	@Test
 	public void testCambiarPinTD_3() {
 		try {
@@ -486,7 +489,7 @@ public class TestCuentaConFixtures4Casos extends TestCase {
 		} catch (Exception e) {
 			fail("Se esperaba PinInvalidoException");
 		}
-	}
+	}*/
 	
 	@Test
 	public void testCambiarPinTD_4() {
@@ -541,4 +544,136 @@ public class TestCuentaConFixtures4Casos extends TestCase {
 		}
 	}
 
+	
+	@Test
+	public void testComprarPorInternet_1() {
+		try {
+			this.tdPepe.comprarPorInternet(-1000, 250);
+			fail("Se esperaba PinInvalidoException");
+		}catch(PinInvalidoException e){
+			
+		}catch(Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}
+	}
+	
+	@Test
+	public void testComprarPorInternet_2() {
+		try {
+			this.tdPepe.comprarPorInternet(293, 250);
+			fail("Se esperaba PinInvalidoException");
+		}catch(PinInvalidoException e){
+			
+		}catch(Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}
+	}
+	
+	@Test
+	public void testComprarPorInternet_3() {
+		try {
+			this.tdPepe.comprarPorInternet(1234, 250);			
+		}catch(Exception e) {
+			fail("Excepcion inesperada: " + e.getMessage());
+		}
+	}
+	
+	@Test
+	public void testComprarPorInternet_4() {
+		
+		try {
+			this.tdPepe.comprarPorInternet(9999, 250);
+			fail("Se esperaba PinInvalidoException");
+		}catch(PinInvalidoException e){
+			
+		}catch(Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}		
+		try {
+			this.tdPepe.comprarPorInternet(9999, 250);
+			fail("Se esperaba PinInvalidoException");
+		}catch(PinInvalidoException e){
+			
+		}catch(Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}
+		try {
+			this.tdPepe.comprarPorInternet(9999, 250);
+			fail("Se esperaba PinInvalidoException");
+		}catch(PinInvalidoException e){
+			
+		}catch(Exception e) {
+			fail("Se esperaba PinInvalidoException");
+		}
+		
+		try {
+			this.tdPepe.comprarPorInternet(1234, 250);
+			fail("Se esperaba TarjetaBloqueadaException");
+		}catch(TarjetaBloqueadaException e){
+			
+		}catch(Exception e) {
+			fail("Se esperaba TarjetaBloqueadaException");
+		}
+	}
+	
+	@Test
+	public void testComprarPorInternet_5() {
+		try {
+			this.tdPepe.comprarPorInternet(1234, -1);
+		}catch(Exception e) {
+			fail("Excepcion inesperada: " + e.getMessage());
+		}
+	}
+	
+	@Test
+	public void testComprarPorInternet_6() {
+		try {
+			this.tdPepe.comprarPorInternet(1234, 1100);
+		}catch(Exception e) {
+			fail("Excepcion inesperada: " + e.getMessage());
+		}
+	}
+	
+	@Test
+	public void emitirTarjetaCredito_1() {
+		try {
+			TarjetaCredito tc = this.cuentaPepe.emitirTarjetaCredito("12345X",-100);
+			assertTrue(tc.getCredito() == -100);
+		}catch(Exception e) {
+			fail("Excepcion inesperada: " + e.getMessage());
+		}
+	}
+	
+	@Test
+	public void emitirTarjetaCredito_2() {
+		try {
+			TarjetaCredito tc = this.cuentaPepe.emitirTarjetaCredito("12345X",250);
+			assertTrue(tc.getCredito() == 250);
+		}catch(Exception e) {
+			fail("Excepcion inesperada: " + e.getMessage());
+		}
+	}
+	
+	@Test
+	public void emitirTarjetaCredito_3() {
+		try {
+			TarjetaCredito tc = this.cuentaPepe.emitirTarjetaCredito("98765F",250);
+			fail("Se esperaba ClienteNoAutorizadoException");
+		}catch(ClienteNoAutorizadoException e) {
+		}catch(Exception e) {
+			fail("Se esperaba ClienteNoAutorizadoException");
+		}
+	}
+	
+	@Test
+	public void emitirTarjetaCredito_4() {
+		try {
+			TarjetaCredito tc = this.cuentaPepe.emitirTarjetaCredito("91919S",250);
+			fail("Se esperaba ClienteNoEncontradoException");
+		}catch(ClienteNoEncontradoException e) {
+		}catch(Exception e) {
+			fail("Se esperaba ClienteNoEncontradoException");
+		}
+	}
+	
 }
