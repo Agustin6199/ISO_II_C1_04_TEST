@@ -41,8 +41,8 @@ public class Cliente {
 	public String getNif() {
 		return nif;
 	}
-	public void setNif(String nif) {
-		this.nif = nif;
+	public void setNif(String nifNuevo) {
+		this.nif = nifNuevo;
 	}
 	public String getNombre() {
 		return nombre;

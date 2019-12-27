@@ -479,7 +479,7 @@ public class TestCuentaConFixtures4Casos extends TestCase {
 			fail("Se esperaba PinInvalidoException");
 		}
 	}
-	/*
+	
 	@Test
 	public void testCambiarPinTD_3() {
 		try {
@@ -489,7 +489,7 @@ public class TestCuentaConFixtures4Casos extends TestCase {
 		} catch (Exception e) {
 			fail("Se esperaba PinInvalidoException");
 		}
-	}*/
+	}
 	
 	@Test
 	public void testCambiarPinTD_4() {

@@ -74,8 +74,11 @@ public class TarjetaDebito extends Tarjeta {
 	
 	@Override
 	public void cambiarPin(int pinViejo, int pinNuevo) throws PinInvalidoException {
-		if (this.pin!=pinViejo)
+		if (this.pin!=pinViejo) {
 			throw new PinInvalidoException();
+		} else if(pinNuevo < 0) {
+			throw new PinInvalidoException();
+		}
 		this.pin = pinNuevo;
 		Manager.getTarjetaDebitoDAO().save(this);
 	}
