@@ -1,3 +1,4 @@
+
 package edu.uclm.esi.iso2.banco20193capas.model;
 
 import javax.persistence.Column;
@@ -12,7 +13,6 @@ public class Cliente {
 	private Long id;
 	@Column(unique = true)
 	protected String nif;
-	
 	private String nombre;
 	private String apellidos;
 
